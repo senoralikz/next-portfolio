@@ -47,7 +47,7 @@ const About = (props: Props) => {
           Since my younger days of importing cheats onto my Gameshark for my
           Gameboy using dial up modem to building my own computer. I decided to
           take my passion and go into software development. I have taken
-          computer science classes and graduated from General Assembly's
+          computer science classes and graduated from General Assembly&apos;s
           Software Engineering Immersive program to learn and develop the skills
           needed to not just get a job, but to also contribute to a team and be
           able to be part of something that will challenge me and help me grow

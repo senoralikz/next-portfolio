@@ -1,3 +1,4 @@
+import { ChevronDoubleUpIcon, ChevronUpIcon } from "@heroicons/react/24/solid";
 import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
@@ -30,26 +31,26 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
         <title>Alexander Morales</title>
       </Head>
 
-      <Header />
+      <Header socials={socials} />
 
       {/* Hero */}
       <section id="hero" className="snap-start">
-        <Hero />
+        <Hero pageInfo={pageInfo} />
       </section>
 
       {/* About */}
       <section id="about" className="snap-center">
-        <About />
+        <About pageInfo={pageInfo} />
       </section>
 
       {/* Skills */}
       <section id="skills" className="snap-start">
-        <Skills />
+        <Skills skills={skills} />
       </section>
 
       {/* Projects */}
       <section id="projects" className="snap-start">
-        <Projects />
+        <Projects projects={projects} />
       </section>
 
       {/* Contact Me */}
@@ -60,13 +61,8 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
       <Link href="#hero">
         <footer className="sticky bottom-5 w-full cursor-pointer">
           <div className="flex items-center justify-center">
-            <Image
-              className="h-10 w-10 rounded-full filter grayscale hover:grayscale-0 cursor-pointer"
-              src="https://i.imgur.com/Un6f48S.jpg"
-              alt=""
-              width={40}
-              height={40}
-            />
+            {/* <ChevronUpIcon className="h-10 w-10 text-[#008080] cursor-pointer" /> */}
+            <ChevronDoubleUpIcon className="h-10 w-10 text-[#008080] cursor-pointer" />
           </div>
         </footer>
       </Link>

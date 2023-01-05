@@ -1,11 +1,13 @@
 import { motion } from "framer-motion";
 import React from "react";
+import { urlFor } from "../sanity";
+import { Project } from "../typings";
 
-type Props = {};
+type Props = {
+  projects: Project[];
+};
 
-const Projects = (props: Props) => {
-  const projects = [1, 2, 3, 4, 5];
-
+const Projects = ({ projects }: Props) => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -28,15 +30,26 @@ const Projects = (props: Props) => {
               transition={{ duration: 1.2 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              src="https://i.imgur.com/B7hvrU8.png"
+              src={urlFor(project?.image).url()}
               alt=""
             />
             <div className="space-y-10 px-0 md:px-10 max-w-6xl">
-              <h4 className="text-4xl font-semibold text-center">Twitt3r</h4>
+              <h4 className="text-4xl font-semibold text-center">
+                {project?.title}
+              </h4>
+              <div className="flex items-center space-x-2 justify-center">
+                {project?.technologies.map((technology) => (
+                  <img
+                    key={technology._id}
+                    src={urlFor(technology?.image).url()}
+                    alt=""
+                    className="h-10 w-10"
+                  />
+                ))}
+              </div>
+
               <p className="text-lg text-center md:text-left">
-                A clone website of Twitter built using Next.js, Tailwind, and
-                Sanity CMS. You are able to login with your Twitter account and
-                post tweets which are handled via Sanity CMS.
+                {project?.summary}
               </p>
             </div>
           </div>

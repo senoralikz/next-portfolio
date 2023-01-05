@@ -188,9 +188,9 @@
     "rxjs" "^6.0.0"
 
 "@sanity/color@^2.1.14":
-  "integrity" "sha512-CmfjhVZZ7XoFZocgZm65XaU4UtQ0J1WsCuoYEmCQC1MAEypRdx+08ABIjFtbxNIUa0l8o5LDQrbJsGjNsBm+lQ=="
-  "resolved" "https://registry.npmjs.org/@sanity/color/-/color-2.2.0.tgz"
-  "version" "2.2.0"
+  "integrity" "sha512-ksIqx1pCH5HTfLTykj1HT1P2wfgYxwyoOnBRssJYLV0YZe3YP+WWe483JKTDPfOVM4qyz/lUZ3If3L7x/BNyew=="
+  "resolved" "https://registry.npmjs.org/@sanity/color/-/color-2.2.2.tgz"
+  "version" "2.2.2"
 
 "@sanity/eventsource@^4.0.0":
   "integrity" "sha512-W0AD141JILOySJ177j2+HTr5k4tWNyXjGsr0dDXJzpqlwZ09J/uPHI73hMe5XtoFumPa9Bj6jy8uu2qdZX84NQ=="
@@ -215,6 +215,11 @@
     "split2" "^4.1.0"
     "throttle-debounce" "^5.0.0"
 
+"@sanity/image-url@^1.0.1":
+  "integrity" "sha512-AdKQ3zMk7WdoNwoJPrAvQhW+kUtBldBX0nHtnGy+rwmgsCQ0rAXasrgH43Fhmsp/yB6piiq+F2d5qEuBFsdQVg=="
+  "resolved" "https://registry.npmjs.org/@sanity/image-url/-/image-url-1.0.1.tgz"
+  "version" "1.0.1"
+
 "@sanity/preview-kit@^1.2.13":
   "integrity" "sha512-cnUlaWjlK+DjIK24KhCfTd6NgJD7AGka/4TYc9PonTR0DkRDaQiSes1Bl5MuAps80XeTel3+ZT6yq9+z5zeDZw=="
   "resolved" "https://registry.npmjs.org/@sanity/preview-kit/-/preview-kit-1.2.14.tgz"
@@ -230,7 +235,7 @@
   "resolved" "https://registry.npmjs.org/@sanity/timed-out/-/timed-out-4.0.2.tgz"
   "version" "4.0.2"
 
-"@sanity/types@^2.35.0", "@sanity/types@^3":
+"@sanity/types@^2.35.0":
   "integrity" "sha512-hocM0bZVa6ONVjLA50gxRSwIcmsaRPpvhl71MgutHxcnvsGZD55n2LQZb4n7h+J9yEFSkz9lY8HbY8n/bw8tsw=="
   "resolved" "https://registry.npmjs.org/@sanity/types/-/types-2.35.0.tgz"
   "version" "2.35.0"
@@ -239,6 +244,14 @@
     "@sanity/color" "^2.1.14"
     "@types/react" "^17.0.42"
     "rxjs" "^6.5.3"
+
+"@sanity/types@^3":
+  "integrity" "sha512-S+AgGRiw630V90bJ5wL4sD0/a4p8I1xb4z7SS660GeTVhpMFxmD5swvkeC0mHR2fubSuWvpYhMLcy3MebA5xaw=="
+  "resolved" "https://registry.npmjs.org/@sanity/types/-/types-3.1.4.tgz"
+  "version" "3.1.4"
+  dependencies:
+    "@sanity/client" "^3.4.1"
+    "@types/react" "^18.0.25"
 
 "@sanity/webhook@^2.0.0":
   "integrity" "sha512-KusHeWVy6yW3hcgVHbGx6qVv//bUj3CD9Nr0EOw086+mo/ESrUV21HjOCrNQ+AYqXvJ9H5qhqmMiuc8H5dXUGA=="
@@ -282,7 +295,7 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*", "@types/react@18.0.26":
+"@types/react@*", "@types/react@^18.0.25", "@types/react@18.0.26":
   "integrity" "sha512-hCR3PJQsAIXyxhTNSiDFY//LhnMZWpNNr5etoCqx/iUfGc5gXWtQR2Phl908jVR6uPXacojQWTg4qRpkxTuGug=="
   "resolved" "https://registry.npmjs.org/@types/react/-/react-18.0.26.tgz"
   "version" "18.0.26"

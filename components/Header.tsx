@@ -3,6 +3,7 @@ import { SocialIcon } from "react-social-icons";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Social } from "../typings";
+import { InboxIcon, AtSymbolIcon } from "@heroicons/react/24/solid";
 
 type Props = {
   socials: Social[];
@@ -55,12 +56,7 @@ const Header = ({ socials }: Props) => {
           }}
           className="flex flex-row items-center text-gray-300 cursor-pointer"
         >
-          <SocialIcon
-            className="cursor-pointer"
-            network="email"
-            fgColor="gray"
-            bgColor="transparent"
-          />
+          <AtSymbolIcon className="cursor-pointer text-gray-500 h-6 w-6 mr-1" />
           <p className="uppercase hidden md:inline-flex text-sm text-gray-400">
             Get In Touch
           </p>

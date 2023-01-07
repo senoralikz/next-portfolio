@@ -6,14 +6,14 @@ export const fetchPageInfo = async () => {
   );
 
   // check res for error
-  if (!res.ok) {
-    console.log(res.statusText);
-  }
+  // if (!res.ok) {
+  //   console.log(res.statusText);
+  // }
 
   const data = await res.json();
   const pageInfo: PageInfo = data.pageInfo;
 
-  // console.log('fetching', pageInfo)
+  // console.log("fetching pageInfo:", pageInfo);
 
   return pageInfo;
 };

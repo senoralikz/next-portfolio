@@ -28,7 +28,7 @@ const Home = ({ pageInfo, skills, projects, socials }: Props) => {
   return (
     <div className="bg-[#242424] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#008080]/80">
       <Head>
-        <title>{pageInfo.name} - Portfolio</title>
+        <title>{pageInfo?.name} - Portfolio</title>
       </Head>
 
       <Header socials={socials} />
@@ -89,6 +89,6 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     },
 
     // rebuild and cache page every 10 seconds at most
-    // revalidate: 10,
+    revalidate: 10,
   };
 };

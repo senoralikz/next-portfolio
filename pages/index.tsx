@@ -89,6 +89,6 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     },
 
     // rebuild and cache page every 10 seconds at most
-    revalidate: 10,
+    // revalidate: 10,
   };
 };

@@ -6,9 +6,12 @@ export const fetchPageInfo = async () => {
   );
 
   // check res for error
-  // if (!res.ok) {
-  //   console.log(res.statusText);
-  // }
+  if (!res.ok) {
+    console.log("error with res", res);
+    console.log("this is the error", res.statusText);
+  } else {
+    console.log("res is okay");
+  }
 
   const data = await res.json();
   const pageInfo: PageInfo = data.pageInfo;

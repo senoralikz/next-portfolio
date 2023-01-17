@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { urlFor } from "../sanity";
 import { Project } from "../typings";
@@ -23,7 +25,7 @@ const Projects = ({ projects }: Props) => {
         {projects?.map((project) => (
           <div
             key={project._id}
-            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen"
+            className="w-screen h-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44"
           >
             <motion.img
               initial={{ y: -300, opacity: 0 }}
@@ -34,23 +36,25 @@ const Projects = ({ projects }: Props) => {
               alt=""
             />
             <div className="space-y-10 px-0 md:px-10 max-w-6xl">
-              <h4 className="text-4xl font-semibold text-center">
-                {project?.title}
-              </h4>
-              <div className="flex items-center space-x-2 justify-center">
+              <Link href={project?.linkToBuild} target="_blank">
+                <h4 className="text-3xl md:text-4xl font-semibold text-center cursor-pointer">
+                  {project?.title}
+                </h4>
+              </Link>
+              <div className="flex items-center space-x-6 justify-center">
                 {project?.technologies.map((technology) => (
-                  <img
+                  <Image
                     key={technology._id}
                     src={urlFor(technology?.image).url()}
                     alt=""
                     className="h-10 w-10"
+                    width={40}
+                    height={40}
                   />
                 ))}
               </div>
 
-              <p className="text-lg text-center md:text-left">
-                {project?.summary}
-              </p>
+              <p className="text-lg text-center">{project?.summary}</p>
             </div>
           </div>
         ))}

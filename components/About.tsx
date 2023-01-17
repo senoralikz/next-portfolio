@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Image from "next/image";
 import React from "react";
 import { urlFor } from "../sanity";
 import { PageInfo } from "../typings";
@@ -24,7 +25,7 @@ const About = ({ pageInfo }: Props) => {
       <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
         About
       </h3>
-      <motion.img
+      <motion.div
         initial={{
           x: -200,
           opacity: 0,
@@ -39,9 +40,17 @@ const About = ({ pageInfo }: Props) => {
         viewport={{
           once: true,
         }}
-        src={urlFor(pageInfo?.profilePic).url()}
-        className="-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-96 xl:w-[500px] xl:h-[600px]"
-      />
+        // src={urlFor(pageInfo?.profilePic).url()}
+        className="hidden md:flex -mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-96 xl:w-[500px] xl:h-[600px]"
+      >
+        <Image
+          src={urlFor(pageInfo?.profilePic).url()}
+          className="-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-96 xl:w-[500px] xl:h-[600px]"
+          alt=""
+          height={224}
+          width={224}
+        />
+      </motion.div>
 
       <div className="space-y-10 px-0 md:px-10">
         <h4 className="text-4xl font-semibold">Background</h4>

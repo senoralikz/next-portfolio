@@ -34,6 +34,7 @@ const Header = ({ socials }: Props) => {
             url={social.url}
             fgColor="gray"
             bgColor="transparent"
+            target={"_blank"}
           />
         ))}
       </motion.div>
@@ -60,6 +61,7 @@ const Header = ({ socials }: Props) => {
             network="email"
             fgColor="gray"
             bgColor="transparent"
+            target={"_blank"}
           />
           <p className="uppercase hidden md:inline-flex text-sm text-gray-400">
             Get In Touch

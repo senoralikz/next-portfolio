@@ -17,8 +17,6 @@ const Hero = ({ pageInfo }: Props) => {
     delaySpeed: 2000,
   });
 
-  // console.log("this is the url:", urlFor(pageInfo?.heroImage).url());
-
   return (
     <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
       <BackgroundCircles />
@@ -29,11 +27,6 @@ const Hero = ({ pageInfo }: Props) => {
         height={128}
         width={128}
       />
-      {/* <img
-        className="relative rounded-full w-32 h-32 mx-auto object-cover"
-        src={urlFor(pageInfo?.heroImage).url()}
-        alt=""
-      /> */}
       <div className="z-20">
         <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[15px]">
           {pageInfo?.role}

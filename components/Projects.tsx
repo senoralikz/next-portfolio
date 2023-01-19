@@ -62,7 +62,7 @@ const Projects = ({ projects }: Props) => {
                   <h4 className="text-center cursor-pointer underline">Repo</h4>
                 </Link>
               </div>
-              <div className="flex items-center space-x-6 justify-center pl-6">
+              <div className="flex items-center space-x-6 justify-center ml-6">
                 {project?.technologies.map((technology) => (
                   <div key={technology._id}>
                     <Image
@@ -76,7 +76,7 @@ const Projects = ({ projects }: Props) => {
                 ))}
               </div>
 
-              <p className="text-lg text-center">{project?.summary}</p>
+              <p className="text-lg text-center ml-6">{project?.summary}</p>
             </div>
           </div>
         ))}

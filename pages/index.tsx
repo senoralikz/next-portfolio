@@ -1,4 +1,4 @@
-import { ChevronDoubleUpIcon, ChevronUpIcon } from "@heroicons/react/24/solid";
+import { ChevronDoubleUpIcon } from "@heroicons/react/24/solid";
 import type { GetServerSideProps } from "next";
 import Head from "next/head";
 import Image from "next/image";
@@ -58,14 +58,13 @@ const Home = ({ pageInfo, skills, projects, socials }: Props) => {
         <ContactMe />
       </section>
 
-      <Link href="#hero">
+      {/* <Link href="#hero">
         <footer className="sticky bottom-5 w-full cursor-pointer">
           <div className="flex items-center justify-center">
-            {/* <ChevronUpIcon className="h-10 w-10 text-[#008080] cursor-pointer" /> */}
             <ChevronDoubleUpIcon className="h-10 w-10 text-[#008080] cursor-pointer" />
           </div>
         </footer>
-      </Link>
+      </Link> */}
     </div>
   );
 };

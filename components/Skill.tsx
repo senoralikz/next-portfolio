@@ -12,7 +12,7 @@ type Props = {
 const Skill = ({ skill, directionLeft }: Props) => {
   return (
     <motion.div
-      className="flex"
+      className="flex flex-col"
       initial={{
         x: directionLeft ? -200 : 200,
         opacity: 0,
@@ -22,11 +22,14 @@ const Skill = ({ skill, directionLeft }: Props) => {
     >
       <Image
         src={urlFor(skill?.image).url()}
-        className="rounded-full border border-gray-500 object-cover w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32"
+        className="w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32"
         alt=""
         width={96}
         height={96}
       />
+      <p className="text-base text-gray-400 text-center pt-3 hidden md:block">
+        {skill?.title}
+      </p>
     </motion.div>
   );
 };

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import { urlFor } from "../sanity";
 import { PageInfo } from "../typings";
@@ -11,6 +11,10 @@ type Props = {
 };
 
 const Hero = ({ pageInfo }: Props) => {
+  useEffect(() => {
+    console.log("this is the resume:", pageInfo?.resume);
+  }, []);
+
   const [text, count] = useTypewriter({
     words: [`The name is ${pageInfo?.name}`, "Frontend Developer"],
     loop: true,
@@ -45,6 +49,9 @@ const Hero = ({ pageInfo }: Props) => {
           <Link href="#projects">
             <button className="heroButton">Projects</button>
           </Link>
+          {/* <Link href={`${pageInfo?.resume}`} download>
+            <button className="heroButton">Resume</button>
+          </Link> */}
         </div>
       </div>
     </div>

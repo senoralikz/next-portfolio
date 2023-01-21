@@ -26,7 +26,12 @@ const Projects = ({ projects }: Props) => {
       </h3>
 
       <div className="relative w-full snap-x snap-mandatory z-20">
-        <Carousel infiniteLoop emulateTouch showStatus={false}>
+        <Carousel
+          infiniteLoop
+          emulateTouch
+          showStatus={false}
+          showThumbs={false}
+        >
           {projects?.map((project) => (
             <div
               key={project._id}

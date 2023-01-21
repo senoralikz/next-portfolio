@@ -55,5 +55,10 @@ export default {
       type: "array",
       of: [{ type: "reference", to: { type: "social" } }],
     },
+    {
+      name: "resume",
+      title: "Resume",
+      type: "file",
+    },
   ],
 };

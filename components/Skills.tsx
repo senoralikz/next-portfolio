@@ -18,7 +18,7 @@ const Skills = ({ skills }: Props) => {
       <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl pl-6">
         Skills
       </h3>
-      <div className="grid grid-cols-3 md:grid-cols-4 gap-8">
+      <div className="grid grid-cols-3 md:grid-cols-4 gap-8 mt-20">
         {skills?.slice(0, skills.length / 2).map((skill) => (
           <Skill key={skill?._id} skill={skill} />
         ))}

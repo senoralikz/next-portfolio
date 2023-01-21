@@ -29,18 +29,18 @@ const Home = ({ pageInfo, skills, projects, socials }: Props) => {
     <div className="bg-[#242424] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0">
       <Head>
         <title>Alexander Morales - Portfolio</title>
-        {/* <link
+        <link
           rel="icon"
           type="image/png"
           sizes="32x32"
           href="/favicon-32x32.png"
-        /> */}
-        {/* <link
+        />
+        <link
           rel="icon"
           type="image/png"
           sizes="16x16"
           href="/favicon-16x16.png"
-        /> */}
+        />
         <link
           rel="apple-touch-icon"
           sizes="180x180"

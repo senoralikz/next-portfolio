@@ -14,7 +14,7 @@ const Hero = ({ pageInfo }: Props) => {
   const [text, count] = useTypewriter({
     words: [
       `<Loading-${pageInfo?.name} />`,
-      "<Professional-Googler />",
+      "<Professional-Google-User />",
       "<Destroyer-of-Bugs />",
     ],
     loop: true,

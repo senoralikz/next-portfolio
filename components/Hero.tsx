@@ -11,10 +11,6 @@ type Props = {
 };
 
 const Hero = ({ pageInfo }: Props) => {
-  useEffect(() => {
-    console.log("this is the resume:", pageInfo?.resume);
-  }, []);
-
   const [text, count] = useTypewriter({
     words: [`The name is ${pageInfo?.name}`, "Frontend Developer"],
     loop: true,

@@ -23,7 +23,7 @@ export interface PageInfo extends SanityBody {
   name: string;
   phoneNumber: string;
   profilePic: Image;
-  resume: file;
+  resumeURL: file;
 }
 
 export interface Technology extends SanityBody {

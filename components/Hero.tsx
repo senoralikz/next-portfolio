@@ -45,9 +45,9 @@ const Hero = ({ pageInfo }: Props) => {
           <Link href="#projects">
             <button className="heroButton">Projects</button>
           </Link>
-          {/* <Link href={`${pageInfo?.resume}`} download>
+          <Link href={`${pageInfo?.resumeURL}?dl=`} target="_blank" download>
             <button className="heroButton">Resume</button>
-          </Link> */}
+          </Link>
         </div>
       </div>
     </div>

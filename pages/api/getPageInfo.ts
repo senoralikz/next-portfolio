@@ -5,7 +5,7 @@ import { sanityClient } from "../../sanity";
 import { PageInfo } from "../../typings";
 
 const pageInfoQuery = groq`
-  *[_type == 'pageInfo'][0]
+  *[_type == 'pageInfo'][0] {..., "resumeURL": resume.asset->url}
 `;
 
 type Data = {

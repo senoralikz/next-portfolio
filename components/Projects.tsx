@@ -35,7 +35,7 @@ const Projects = ({ projects }: Props) => {
           {projects?.map((project) => (
             <div
               key={project._id}
-              className="w-screen h-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44"
+              className="w-screen h-screen flex-shrink-0 snap-center flex flex-col space-y-3 items-center justify-center p-20 md:p-44"
             >
               <motion.img
                 initial={{ y: -300, opacity: 0 }}
@@ -46,7 +46,7 @@ const Projects = ({ projects }: Props) => {
                 alt=""
                 className="shadow-2xl rounded-md"
               />
-              <div className="space-y-8 px-0 md:px-10 max-w-6xl">
+              <div className="space-y-6 px-0 md:px-10 max-w-6xl">
                 <div>
                   <Link
                     href={project?.linkToBuild}

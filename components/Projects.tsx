@@ -35,7 +35,7 @@ const Projects = ({ projects }: Props) => {
           {projects?.map((project) => (
             <div
               key={project._id}
-              className="w-screen h-screen flex-shrink-0 snap-center flex flex-col space-y-3 items-center justify-center p-20 md:p-44"
+              className="w-screen h-screen flex-shrink-0 snap-center flex flex-col space-y-3 items-center justify-center p-20 md:p-44 mt-4"
             >
               <motion.img
                 initial={{ y: -300, opacity: 0 }}

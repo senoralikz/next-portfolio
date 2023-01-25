@@ -13,7 +13,7 @@ const Skill = ({ skill }: Props) => {
     <div className="flex flex-col">
       <Image
         src={urlFor(skill?.image).url()}
-        className="w-20 h-20 md:w-28 md:h-28 lg:w-32 lg:h-32 object-contain"
+        className="w-20 h-20 md:w-28 md:h-28 lg:w-32 lg:h-32 object-contain rounded-md"
         alt=""
         width={96}
         height={96}
@@ -22,27 +22,6 @@ const Skill = ({ skill }: Props) => {
         {skill?.title}
       </p>
     </div>
-
-    // <motion.div
-    //   className="flex flex-col"
-    //   initial={{
-    //     x: directionLeft ? -200 : 200,
-    //     opacity: 0,
-    //   }}
-    //   transition={{ duration: 1 }}
-    //   whileInView={{ opacity: 1 }}
-    // >
-    //   <Image
-    //     src={urlFor(skill?.image).url()}
-    //     className="w-20 h-20 md:w-28 md:h-28 lg:w-32 lg:h-32 object-contain"
-    //     alt=""
-    //     width={96}
-    //     height={96}
-    //   />
-    //   <p className="text-base text-gray-400 text-center pt-3 hidden md:block">
-    //     {skill?.title}
-    //   </p>
-    // </motion.div>
   );
 };
 

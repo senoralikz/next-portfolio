@@ -81,7 +81,7 @@ const Projects = ({ projects }: Props) => {
                       <Image
                         src={urlFor(technology?.image).url()}
                         alt=""
-                        className="h-8 w-8 md:h-12 md:w-12 object-contain"
+                        className="h-8 w-8 md:h-12 md:w-12 object-contain rounded-md"
                         width={40}
                         height={40}
                       />

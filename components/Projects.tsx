@@ -95,10 +95,11 @@ const Projects = ({ projects }: Props) => {
                                         </div>
                                     ))}
                                 </div>
-
-                                <p className="md:text-lg text-center">
-                                    {project?.summary}
-                                </p>
+                                <div className="w-screen px-6">
+                                    <p className="md:text-lg text-center">
+                                        {project?.summary}
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     ))}

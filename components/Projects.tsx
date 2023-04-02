@@ -1,4 +1,4 @@
-import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/solid";
+import { ComputerDesktopIcon } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -34,7 +34,7 @@ const Projects = ({ projects }: Props) => {
                 >
                     {projects?.map((project) => (
                         <div
-                            key={project._id}
+                            key={project?._id}
                             className="w-screen h-screen flex-shrink-0 snap-center flex flex-col space-y-3 items-center justify-center p-20 md:p-44 mt-4"
                         >
                             <motion.img
@@ -48,36 +48,62 @@ const Projects = ({ projects }: Props) => {
                             />
                             <div className="space-y-6 px-0 md:px-10 max-w-6xl">
                                 <div>
-                                    <Link
-                                        href={project?.linkToBuild}
-                                        target="_blank"
-                                        className="flex justify-center mx-auto"
-                                    >
-                                        <h4 className="text-2xl md:text-4xl font-semibold text-center cursor-pointer">
-                                            {project?.title}
-                                        </h4>
-                                        <ArrowTopRightOnSquareIcon className="w-4 h-4 md:w-5 md:h-5 ml-2" />
-                                    </Link>
-                                    <div className="flex justify-center items-center pr-8">
-                                        <SocialIcon
-                                            url={project?.linkToRepo}
-                                            fgColor="gray"
-                                            bgColor="transparent"
-                                            target={"_blank"}
-                                        />
-                                        <Link
-                                            href={project?.linkToRepo}
-                                            legacyBehavior
-                                        >
-                                            <a
+                                    <h4 className="text-2xl md:text-4xl font-semibold text-center">
+                                        {project?.title}
+                                    </h4>
+                                    <div className="flex justify-center items-center pr-6 space-x-10">
+                                        <div className="flex items-center cursor-pointer hover:underline">
+                                            <SocialIcon
+                                                url={project?.linkToRepo}
+                                                fgColor="gray"
+                                                bgColor="transparent"
                                                 target={"_blank"}
-                                                rel="noopener noreferrer"
+                                            />
+                                            <Link
+                                                href={project?.linkToRepo}
+                                                legacyBehavior
                                             >
-                                                <h4 className="text-sm md:text-base text-center cursor-pointer hover:underline">
-                                                    Repo
-                                                </h4>
-                                            </a>
-                                        </Link>
+                                                <a
+                                                    target={"_blank"}
+                                                    rel="noopener noreferrer"
+                                                >
+                                                    <h4 className="text-sm md:text-base text-center cursor-pointer hover:underline">
+                                                        Link to Repo
+                                                    </h4>
+                                                </a>
+                                            </Link>
+                                        </div>
+                                        <div className="flex items-center cursor-pointer hover:underline">
+                                            <Link
+                                                href={project?.linkToBuild}
+                                                legacyBehavior
+                                            >
+                                                <a
+                                                    target={"_blank"}
+                                                    rel="noopener noreferrer"
+                                                >
+                                                    <ComputerDesktopIcon
+                                                        href={
+                                                            project?.linkToBuild
+                                                        }
+                                                        className="w-7 mr-2 text-gray-500"
+                                                    />
+                                                </a>
+                                            </Link>
+                                            <Link
+                                                href={project?.linkToBuild}
+                                                legacyBehavior
+                                            >
+                                                <a
+                                                    target={"_blank"}
+                                                    rel="noopener noreferrer"
+                                                >
+                                                    <h4 className="text-sm md:text-base text-center cursor-pointer hover:underline">
+                                                        Link to Build
+                                                    </h4>
+                                                </a>
+                                            </Link>
+                                        </div>
                                     </div>
                                 </div>
                                 <div className="flex items-center space-x-6 justify-center">

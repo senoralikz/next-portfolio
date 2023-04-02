@@ -121,7 +121,7 @@ const Projects = ({ projects }: Props) => {
                                         </div>
                                     ))}
                                 </div>
-                                <div className="w-screen px-1">
+                                <div className="w-screen md:w-fit px-1">
                                     <p className="md:text-lg text-center">
                                         {project?.summary}
                                     </p>
